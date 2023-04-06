@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather Forecast Application</title>
+    <link rel="icon" href="./weather.png">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="./forecast.css">
+    
+</head>
+<body onload="startTime(), GetWeather(DefaultPlace)">
+    <main>
+        <header>
+            <p id="WebApp_Name">Check<span>Weather</span></p>
+            <img src="./weather.png" alt="WebApp-icon" class="WebApp_Icon">
+            <form onsubmit="event.preventDefault();">
+                <div class="Search_Field">
+                    <input type="text" id="Search_Place" placeholder="Search here">
+                    <button id="SearchButton"><img src="./search.png" alt="WebApp-icon" class="WebApp_Icon"></button>
+                </div>
+                <p id="ErrorMsg"></p>
+            </form>
+        </header>
+
+        <div class="Main_Container">
+            <div class="CurrentWeather_Container">
+                 <div class="CurrentWeather">
+                    <div class="Date_Time_Container">
+                        <p id="Date">Date</p>
+                        <p id="Time">Time</p>
+                    </div>
+                    <h3 id="Location_Name">Location Name</h3>
+                    <div class="Current_Weather_Details">
+                        <div class="Weather_Item">
+                            <h5>Temperature <i class="fa-solid fa-temperature-full"></i></h5>
+                            <p> <span id="Temperature"></span>&deg;C</p>
+                        </div>
+                        <div class="Weather_Item">
+                            <h5>Wind Speed <i class="fa-solid fa-wind"></i></h5>
+                            <p><span id="WindSpeed"></span> Km/h</p>
+                        </div>
+                        <div class="Weather_Item">
+                            <h5>Humidity <i class="fa-solid fa-fire-flame-simple"></i></h5>
+                            <p><span id="Humidity"></span>&percnt;</p>
+                        </div>
+                        <div class="Weather_Item" id="WeatherConditionBox">
+                            <h5>Condition <i class="fa-solid fa-cloud"></i></h5>
+                            <p id="Condition"> </p>
+                            <div id="ConditionIcon"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+        <br><br>
+            <div class="WeatherForecast_Container">
+                <div class="WeatherForeCast">
+                    <div class="WeatherForeCast_Item">
+                        <h5 id="Day1"></h5>
+                        <div class="ForeCastItem-Details">
+                            <div id="Day1ConditionBox" class="ConditionBox"> </div>
+                            <p>Temperature<span id="Day1Temperature"></span></p>
+                            <p>Wind Speed<span id="Day1Wind"></span></p>
+                            <p>Humidity<span id="Day1Humidity"></span></p>
+                        </div>
+                    </div>
+                    <div class="WeatherForeCast_Item">
+                        <h5 id="Day2"></h5>
+                        <div class="ForeCastItem-Details">
+                            <div id="Day2ConditionBox" class="ConditionBox"> </div>
+                            <p>Temperature<span id="Day2Temperature"></span></p>
+                            <p>Wind Speed<span id="Day2Wind"></span></p>
+                            <p>Humidity<span id="Day2Humidity"></span></p>
+                        </div>
+                    </div>
+                    <div class="WeatherForeCast_Item">
+                        <h5 id="Day3"></h5>
+                        <div class="ForeCastItem-Details">
+                            <div id="Day3ConditionBox" class="ConditionBox"> </div>
+                            <p>Temperature<span id="Day3Temperature"></span></p>
+                            <p>Wind Speed<span id="Day3Wind"></span></p>
+                            <p>Humidity<span id="Day3Humidity"></span></p>
+                        </div>
+                    </div>
+                    <div class="WeatherForeCast_Item">
+                        <h5 id="Day4"></h5>
+                        <div class="ForeCastItem-Details">
+                            <div id="Day4ConditionBox" class="ConditionBox"> </div>
+                            <p>Temperature<span id="Day4Temperature"></span></p>
+                            <p>Wind Speed<span id="Day4Wind"></span></p>
+                            <p>Humidity<span id="Day4Humidity"></span></p>
+                        </div>
+                    </div>
+                    <div class="WeatherForeCast_Item">
+                        <h5 id="Day5"></h5>
+                        <div class="ForeCastItem-Details">
+                            <div id="Day5ConditionBox" class="ConditionBox"> </div>
+                            <p>Temperature<span id="Day5Temperature"></span></p>
+                            <p>Wind Speed<span id="Day5Wind"></span></p>
+                            <p>Humidity<span id="Day5Humidity"></span></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <footer> 
+            <div class="MyInfo">
+                <p>Designed and Developed By <span id="Name">Akanksha Jadhav</span></p>
+            </div>
+            <div class="Media">
+                <a href="https://www.facebook.com/akanksha.jadhav.1217727" target="_blank" title="facebook">
+                    <i class="fa-brands fa-facebook "></i></a>
+                <a href="https://github.com/akanksha-1911" target="_blank" title="Github-Profile">
+                        <i class="fa-brands fa-github"></i></a>
+                <a href="https://instagram.com/akan.ksha.19__?igshid=MTIzZWQxMDU=" target="_blank" title="instagram">
+                    <i class="fa-brands fa-instagram " target="_blank"></i></a> 
+                <a href="https://www.linkedin.com/in/akanksha-jadhav-883529246/" target="_blank"
+                    title="Linkdin-Profile"><i class="fa-brands fa-linkedin-in"></i></a>
+            </div>
+        </footer><br><br><br>
+    <script src="./forecast.js"></script>
+</body>
+</html>
